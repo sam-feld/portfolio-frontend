@@ -1,0 +1,98 @@
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    gap: 10px;
+
+    color: #e0e0e0; 
+    background-color: #333333; 
+
+    /*  Remove default button styles */
+    border: none;
+    outline: none;
+    box-shadow: none;
+    appearance: none; /* removes platform-specific styles (like bevels) */
+
+    /*  Control dimensions */
+    padding: 10px 20px;  /* adjusts internal spacing */
+    width: 170px;        /* or use max-width, min-width */
+    height: 40px;        /* or use line-height + padding */
+
+    cursor: pointer;     /* make it look clickable */
+    border-radius: 6px;  /* add rounded corners */
+    font-size: 17px;   /* control text size */
+
+    transition: background-color 0.2s ease; /* Smooth hover effect (I don't really see a difference)*/
+}
+
+.button-container:hover {
+    color: #212121;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  position: relative;
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.x {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+
+  color: #e0e0e0; 
+
+  background: none;     /* removes default background */
+  border: none;         /* removes the border */
+  outline: none;        /* removes focus outline */
+  box-shadow: none;     /* removes any browser shadow */
+  cursor: pointer;      /* makes it clear it's clickable */
+
+  font-size: 16px;   
+}
+
+.second-paragrph {
+  font-size: 14px;
+  margin: 0; 
+}
+
+.resume-link {
+    text-decoration: none;
+    padding: 2px;
+    padding-left: 5px;
+
+    color: #2e2e2e;
+    background-color: #e0e0e0;
+
+    /*  Remove default button styles */
+    border: none;
+    outline: none;  
+    box-shadow: none;
+    appearance: none;
+
+    border-radius: 4px; 
+  
+}
+
+.resume-link:hover {
+  color: #b3b3b3;
+}

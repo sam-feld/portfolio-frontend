@@ -1,0 +1,165 @@
+.project-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+    gap: 10px;
+
+    /* Background colors */
+    /* background-color: #212121; /*  a dark grey (In chrome's dark mode) that is not as dark as the background */
+    /* background-color: #2a2a2a; /*  a - slightly lighter - dark gray (not seen in the browser's dark mode) */
+    /*background-color: #2e2e2e; /*  Similar to (a tad lighter than) spotify's dark grey components */
+     background-color: #333333; /* The chosen shade */
+    /* background-color: #383838; /*  a lighter dark gray (In chrome's dark mode) */
+
+    width: 40vw;        /* Take up a % of the viewport width */
+    margin-left: auto;  /* Push it to the right */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;   /* Vertically align items to the top */
+    align-items: flex-start;       /* Horizontally align items to the left */
+
+
+    max-height: 20vh; 
+    margin-bottom: 10px;
+    width: 85%;
+    /* padding: 10px; */
+}
+
+.projects-title {
+    font-size: 17px; 
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-button-list {
+    display: flex;
+    flex-direction: row;
+    margin-left: 23px;
+    margin-top: 15px;
+    overflow-x: auto;       /* enables horizontal scroll */
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE and old Edge */
+    white-space: nowrap;    /* prevents items from wrapping to next line */
+    max-width: 28vw;
+  }
+
+  .filter-button-list::-webkit-scrollbar {
+    display: none;               /* Chrome, Safari, new Edge */
+  }
+
+.project-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    align-self: flex-start; /* override parent centering */
+    gap: 20px;
+    overflow-y: auto;       /* enables vertical scrolling */
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE and old Edge */
+    margin-top: auto;
+    height: 80vh;   
+    padding: 0 40px;
+}
+
+.project-list::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, new Edge */
+}
+
+.dropdownWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+
+  .dropdownWrapper[data-flip="true"] {
+    flex-direction: column-reverse;  /* flips order: option appears above */
+  }
+
+.dropdownMenu {
+    background-color: #333;
+
+    border-radius: 8px;
+    padding: 0;                   /* Clean padding for child */
+    margin-top: 6px;
+    width: fit-content;
+    position: relative;           /* ✅ Add this to anchor absolute children */
+    z-index: 10;
+  }
+
+.dropdownSelected {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  width: 70px;
+  position: relative;
+  z-index: 2;
+  font-size: 10px;
+}
+
+.dropdownOption {                  /* Default: below the selected item */
+    width: 70px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); */
+    background-color: #333;
+    color: #e0e0e0;
+    font-size: 10px;
+  }
+
+/* .dropdownOption {
+    width: 90px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  } */
+
+/* Light (selected item) */
+.light {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Dark (hover option) */
+.dark {
+  background-color: #333;
+  color: #e0e0e0;
+  top: 100%; /* default: appear below */
+}
+
+.dropdownContainer {
+    border: 1px solid #888;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: transparent;
+    position: relative;
+  }
+
+@media (max-width: 600px) {
+    .project-display {
+        width: 100vw;
+    }
+    .filter-button-list {
+      max-width: 63vh;
+    }
+    .project-list {
+        justify-content: center; 
+        align-self: center; /* override parent centering */
+    }
+}

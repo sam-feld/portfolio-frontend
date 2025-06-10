@@ -1,0 +1,35 @@
+
+.image-preview-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.image-thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-thumbnail {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #121212;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.image-thumbnail-selected {
+    border: 2px solid #e0e0e0;
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    background-color: #121212;
+    border-radius: 6px;
+    /* border: 2px solid #212121; */
+}

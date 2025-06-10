@@ -1,0 +1,49 @@
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: hsl(0, 0%, 88%);
+    width: 118px;
+    max-height: 20px;
+    padding: 10px;
+    border-radius: 6px;  /* add rounded corners */
+}
+
+.skill-icon {
+    margin-top: 8px;
+    width: 30px;
+    height: 30px;
+    /* object-fit: contain; */
+    transition: width .1s, height .1s;
+}
+
+/* .skill-icon :hover {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+} */
+
+/* .skill-icon :active {
+    width: 40px;
+    height: 40px;
+} */
+
+/* .product-link:hover {
+    color: #b3b3b3;
+} */
+
+.product-title {
+    font-size: 15px;
+    margin: 0;
+    object-fit: contain;
+    text-decoration: none;
+    color: #333333;
+    align-items: center;
+
+    margin-left: 8px;
+    object-fit: contain;
+}
+
+

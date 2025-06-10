@@ -1,0 +1,105 @@
+
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.github a {
+    word-break: break-all; /* ensures long URLs wrap cleanly */
+    font-size: 14px;
+    max-width: 400px;
+    color: white;
+  }
+
+a:hover {
+    color: lightblue;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.outer-container {
+    flex-direction: column;
+    align-items: center; 
+    /* width: 100%;
+    min-height: 100vh;  */
+}
+
+.inner-container {
+    max-width: fit-content;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.product-info-container {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.product-info-container p {
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+
+.title {
+    line-height: 32px;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+}
+
+.star {
+    width: 30px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.discount {
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.img-container {
+    background-color: #333333;
+    padding-left: 30px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.github {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.github-logo {
+    height: 30px;
+    width: 30px;
+}

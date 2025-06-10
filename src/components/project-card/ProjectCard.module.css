@@ -1,0 +1,59 @@
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    width: 150px;
+    height: 230px;
+    padding: 10px;
+    border-radius: 6px;  /* add rounded corners */
+
+    /* Background colors */
+     background-color: #212121; /*  a dark grey (In chrome's dark mode) that is not as dark as the background */
+     /*background-color: #2a2a2a; /*  a - slightly lighter - dark gray (not seen in the browser's dark mode) */
+    /*background-color: #2e2e2e; /*  Similar to (a tad lighter than) spotify's dark grey components */
+    /*background-color: #333333; /* The shade used for the different sections of the page */
+    /* background-color: #383838; /*  a lighter dark gray (In chrome's dark mode) */
+}
+
+.product-image-container {
+    height: 160px;
+    display: flex;
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transition: width .1s, height .1s;
+}
+
+.product-image:hover {
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.product-image:active {
+    width: 150px;
+    height: 150px;
+}
+
+.product-link {
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #e0e0e0;  
+}
+
+.product-link:hover {
+    color: #383838;
+}
+
+.product-title {
+    font-size: 20px;
+    margin: 0;
+}
+
+

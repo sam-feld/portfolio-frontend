@@ -1,0 +1,75 @@
+
+.simple-title {
+    margin-left: 35px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    /* padding: 5px; */
+    font-size: 17px; 
+}
+
+.skills-display {
+    display: flex;
+    flex-direction: column;
+
+    /* Background colors */
+    /* background-color: #212121; /*  a dark grey (In chrome's dark mode) that is not as dark as the background */
+    /* background-color: #2a2a2a; /*  a - slightly lighter - dark gray (not seen in the browser's dark mode) */
+    /*background-color: #2e2e2e; /*  Similar to (a tad lighter than) spotify's dark grey components */
+     background-color: #333333; /* The chosen shade */
+    /* background-color: #383838; /*  a lighter dark gray (In chrome's dark mode) */
+
+    max-width: 40vw;        /* Take up a % of the viewport width */
+    border-radius: 6px;  /* add rounded corners */
+
+    height: 40vh;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    align-self: flex-start; /* override parent centering */
+    gap: 10px;
+    overflow-y: auto;       /* enables vertical scrolling */
+    scrollbar-width: none;       /* Firefox */
+     -ms-overflow-style: none;    /* IE and old Edge */
+    margin-top: 15px;
+
+    padding-top: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.skills-list::-webkit-scrollbar {
+    display: none;               /* Chrome, Safari, new Edge */
+  }
+
+@media (max-width: 600px) {
+    .skills-display {
+        max-width: 80vw;
+        height: 30vh;
+    }
+}
+
+/* Unused UI */
+
+/* .skills-container {
+    background-color: #333333; 
+
+}
+
+.skills-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin-bottom: 0;
+    font-size: 17px; 
+    padding: 5px;
+    width: 155px;
+    height: 20px;
+    background-color: #333333;
+} */
