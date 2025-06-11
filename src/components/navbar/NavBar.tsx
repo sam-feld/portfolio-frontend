@@ -1,73 +1,74 @@
 import { Link } from 'react-router-dom'
 import styles from './NavBar.module.css'
-import { useEffect, useState } from 'react'
-import { getUser } from '../../utils/api'
-import { User } from '../../utils/types'
+// import { useEffect } from 'react'
+// import { useState } from 'react'
+// import { getUser } from '../../utils/api'
+// import { User } from '../../utils/types'
 
 export default function NavBar() {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const [user, setUser] = useState<User | null>(null)
+    // const [isLoggedIn, setIsLoggedIn] = useState(false)
+    // const [user, setUser] = useState<User | null>(null)
 
-    async function loadUser() {
-        const user = await getUser(localStorage.getItem('TOKEN')!)
-        setUser(user)
-    }
+    // async function loadUser() {
+    //     const user = await getUser(localStorage.getItem('TOKEN')!)
+    //     setUser(user)
+    // }
 
-    window.addEventListener('storage', () => {
-        if (localStorage.getItem('TOKEN')) {
-            setIsLoggedIn(true)
-        }
-        else {
-            setIsLoggedIn(false)
-        }
-    })
+    // window.addEventListener('storage', () => {
+    //     if (localStorage.getItem('TOKEN')) {
+    //         setIsLoggedIn(true)
+    //     }
+    //     else {
+    //         setIsLoggedIn(false)
+    //     }
+    // })
 
-    useEffect(() => {
-        if (localStorage.getItem('TOKEN')) {
-           setIsLoggedIn(true)
-        }
-        else {
-            setIsLoggedIn(false)
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (localStorage.getItem('TOKEN')) {
+    //        setIsLoggedIn(true)
+    //     }
+    //     else {
+    //         setIsLoggedIn(false)
+    //     }
+    // }, [])
 
-    useEffect(() => {
-        if (isLoggedIn) {
-            loadUser()
-        }
-        else {
-            setUser(null)
-        }
-    }, [isLoggedIn])
+    // useEffect(() => {
+    //     if (isLoggedIn) {
+    //         loadUser()
+    //     }
+    //     else {
+    //         setUser(null)
+    //     }
+    // }, [isLoggedIn])
 
-    function logout() {
-        localStorage.removeItem('TOKEN')
-        window.dispatchEvent(new Event("storage"));
-        setIsLoggedIn(false)
-    }
+    // function logout() {
+    //     localStorage.removeItem('TOKEN')
+    //     window.dispatchEvent(new Event("storage"));
+    //     setIsLoggedIn(false)
+    // }
 
-    function createNavItems() {
-        if (!isLoggedIn) {
-            return (            
-                <Link className={styles.login} to="/login">Login</Link>
-            )
-        }
-        else if (isLoggedIn && !user) {
-            return (
-                <button className={styles.logout} onClick={logout}>Logout</button>
-            )
-        }
-        else {
-            return (
-                <>
-                    <p className={styles.name}>{`${user!.firstName} ${user!.lastName}`}</p>
-                    <Link className={styles.cart} to="/cart">Cart</Link>
-                    <button className={styles.logout} onClick={logout}>Logout</button>
-                </>
-            )
-        }
-    }
+    // function createNavItems() {
+    //     if (!isLoggedIn) {
+    //         return (            
+    //             <Link className={styles.login} to="/login">Login</Link>
+    //         )
+    //     }
+    //     else if (isLoggedIn && !user) {
+    //         return (
+    //             <button className={styles.logout} onClick={logout}>Logout</button>
+    //         )
+    //     }
+    //     else {
+    //         return (
+    //             <>
+    //                 <p className={styles.name}>{`${user!.firstName} ${user!.lastName}`}</p>
+    //                 <Link className={styles.cart} to="/cart">Cart</Link>
+    //                 <button className={styles.logout} onClick={logout}>Logout</button>
+    //             </>
+    //         )
+    //     }
+    // }
 
     type HomeIconProps = {
         className?: string; // optional className prop
